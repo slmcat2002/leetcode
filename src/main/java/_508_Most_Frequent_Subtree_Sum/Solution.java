@@ -1,11 +1,8 @@
 package _508_Most_Frequent_Subtree_Sum;
 
 
-import java.util.Collections;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.LinkedList;
+import java.lang.reflect.Array;
+import java.util.*;
 
 class TreeNode {
     int val;
@@ -28,11 +25,7 @@ class Solution {
         for (Integer sum: counter.keySet()){
             if (counter.get(sum) == max) resultList.add(sum);
         }
-        int[] result = new int[resultList.size()];
-        for (int i = 0; i < resultList.size(); i ++){
-            result[i] = resultList.get(i);
-        }
-        return result;
+        return Arrays.stream(resultList.toArray()).mapToInt(n -> (int)n).toArray();
     }
 
     private int sum(TreeNode node){
