@@ -100,8 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 
-#Pycharm
+#IDEA
 .idea/
 out/
 .gradle
+src/test/
 
